@@ -74,6 +74,21 @@
   <script>
     // Add your code here!
     console.log("Let's get ready to party with jQuery!");
+    $('article img').addClass('image-center');
+    $('article p:last').remove();
+    $('h1').css('font-size', (Math.floor(Math.random() * 99 + 1)));
+    $('li:last').after('<li>Hello Eldy!</li>');
+    $('aside').empty().append('<p>Sorry for the list</p>');
+    $('.form-control').keyup(function () {
+      let red = $('.form-control').eq(0).val();
+      let blue = $('.form-control').eq(1).val();
+      let green = $('.form-control').eq(2).val();
+      $('body').css('background-color', `rgb(${red},${green},${blue})`);
+    });
+    $("img").on('click', function (event) {
+      $(event.target).remove();
+    });
+
   </script>
 </body>
 
